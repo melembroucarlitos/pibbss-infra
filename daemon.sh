@@ -1,5 +1,11 @@
 #!/bin/bash
 
+ENVFILE = /environment.env
+
+if [-f $ENVFILE ]; then
+    . $ENVFILE
+fi
+
 ###########
 ## FUNCS ##
 ###########
@@ -72,7 +78,6 @@ while true; do
         time_since_last_gpu_activity=$(awk "BEGIN {print $time_since_last_gpu_activity + $LOOP_FREQUENCY}")
     fi
 
-    echo $time_since_last_gpu_activity
     sleep $LOOP_FREQUENCY
 done
 

@@ -1,9 +1,0 @@
-[Unit]
-Description=Watches for Idle Pods and Terminates Them
-
-[Service]
-ExecStart=/pibbs-infra/daemon.sh
-Restart=always
-
-[Install]
-WantedBy=multi-user.target

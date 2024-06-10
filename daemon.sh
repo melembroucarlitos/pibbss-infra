@@ -39,9 +39,9 @@ extract_pod_id() {
 ## CONSTS ##
 ############
 
-readonly INITIAL_WAIT_TIME=300 # 5 minutes 60 * 5
+readonly INITIAL_WAIT_TIME=120 # 2 minutes 60 * 2
 readonly LOOP_FREQUENCY=0.1
-readonly UPPER_BOUND_TIME_SINCE_LAST_GPU_ACTIVITY=120 # 2 minutes 60 * 2
+readonly UPPER_BOUND_TIME_SINCE_LAST_GPU_ACTIVITY=60 # 1 minutes 60 * 1
 readonly POD_ID=$(extract_pod_id)
 
 # Check if POD_ID was set successfully

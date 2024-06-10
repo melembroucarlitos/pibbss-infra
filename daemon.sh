@@ -24,15 +24,15 @@ extract_pod_id() {
         return 1
     fi
     
-    local pod_ids
-    pod_ids=$(runpodctl get pods | awk 'NR > 1 {print $1}')
+    # local pod_ids
+    # pod_ids=$(runpodctl get pods | awk 'NR > 1 {print $1}')
     
-    if echo "$pod_ids" | grep -qw "$extracted"; then
-        echo "$extracted"
-    else
-        echo "POD_ID was not found in the list of POD IDs" >&2
-        return 1
-    fi
+    # if echo "$pod_ids" | grep -qw "$extracted"; then
+    #     echo "$extracted"
+    # else
+    #     echo "POD_ID was not found in the list of POD IDs" >&2
+    #     return 1
+    # fi
 }
 
 ############

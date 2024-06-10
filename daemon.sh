@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENVFILE=/environment.env
+ENVFILE=/etc/environment.env
 
 if [ -f $ENVFILE ]; then
     . $ENVFILE

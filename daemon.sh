@@ -19,6 +19,7 @@ extract_pod_id() {
     
     if [[ $env_string =~ RUNPOD_POD_HOSTNAME=([a-zA-Z0-9]+)- ]]; then
         extracted="${BASH_REMATCH[1]}"
+        echo "$extracted"
     else
         echo "No match found." >&2
         return 1

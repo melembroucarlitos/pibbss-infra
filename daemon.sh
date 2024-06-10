@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ENVFILE = /environment.env
+ENVFILE=/environment.env
 
-if [-f $ENVFILE ]; then
+if [ -f $ENVFILE ]; then
     . $ENVFILE
 fi
 

@@ -2,17 +2,13 @@
 
 ENVFILE=/etc/environment.env
 
-if [ -f $ENVFILE ]; then
-    . $ENVFILE
-fi
-
 ###########
 ## FUNCS ##
 ###########
 
 extract_pod_id() {
     local env_string
-    env_string=$(printenv | grep RUNPOD_POD_HOSTNAME=)
+    env_string=$(cat $ENVFILE | grep RUNPOD_POD_HOSTNAME=)
 
     if [ -z "$env_string" ]; then
         echo "RUNPOD_POD_HOSTNAME is not set" >&2
